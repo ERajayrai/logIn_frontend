@@ -1,0 +1,11 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    border-radius: 10px;
+    border: rgba(0, 0, 255, 0.568);
+    border: double;
+  }
+  .error{
+    color:wheat;
+    background-color: red;
+  }

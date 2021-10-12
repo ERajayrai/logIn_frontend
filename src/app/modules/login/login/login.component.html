@@ -1,0 +1,38 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="submit">
+      <table class="full-width-input" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width-input">
+            <input matInput placeholder="Email" type="email" formControlName="email"  required>
+            <div class="errors" *ngIf="email.invalid && (email.touched || email.dirty)">
+              <span class="error" *ngIf="email.errors?.email">please enter valid email</span>
+              <span class="error" *ngIf="email.errors?.required">enail is required</span>
+            </div>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+        <td><mat-form-field class="full-width-input">
+          <input matInput placeholder="Password" type="password" formControlName="password"  required>
+          <div class="errors" *ngIf="password.invalid && (password.touched || password.dirty)">
+            <span class="error" *ngIf="password.errors?.required" >password id required</span>
+          </div>
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="getEmailPassword()"[disabled]="submit.invalid" color="primary">Login</button>
+    <span>OR</span>
+    <a  cols="2" href="/signup">SignUp</a>
+  </mat-card-actions>
+</mat-card>
+ 
+  
+
+
